@@ -93,7 +93,7 @@ export default function PaywallGate({ session, children }) {
             Get access
           </a>
           <p style={{ fontSize: 12, color: SLATE, marginTop: 18 }}>
-            Already purchased with this email? Access is usually added within a few hours ‚Äî check back soon.
+            Already purchased with this email? Access is usually added within a few hours - check back soon.
           </p>
         </div>
       </div>
