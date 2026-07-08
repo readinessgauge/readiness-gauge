@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
 import { Gauge as GaugeIcon, Mail } from "lucide-react";
-
+import PaywallGate from "./PaywallGate";
 const INK = "#14213D";
 const PARCHMENT = "#FAF9F5";
 const BRASS = "#A9812F";
@@ -164,7 +164,7 @@ export default function AuthGate({ children }) {
           Sign out ({session.user.email})
         </button>
       </div>
-      {children}
+      <PaywallGate session={session}>{children}</PaywallGate>
     </div>
   );
 }
