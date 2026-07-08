@@ -359,7 +359,7 @@ export default function App() {
             </h1>
           </div>
           <p style={{ color: SLATE, fontSize: 13, marginTop: 4, marginLeft: 32, lineHeight: 1.4 }}>
-            AI Readiness Diagnostic — a leadership instrument for assessing organisational readiness for AI adoption.
+            AI Readiness Diagnostic - a leadership instrument for assessing organisational readiness for AI adoption.
           </p>
         </header>
 
@@ -643,3 +643,4 @@ function ProgressView({ assessments, chartData }) {
     </div>
   );
 }
+
