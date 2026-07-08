@@ -102,4 +102,70 @@ export default function AuthGate({ children }) {
                   borderRadius: 6,
                   border: `1px solid ${HAIRLINE}`,
                   fontSize: 14,
-                  boxSizing: "border-box",
+                  boxSizing: "border-box",marginBottom: 14,
+                }}
+              />
+
+              <label
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: 8,
+                  fontSize: 12.5,
+                  color: SLATE,
+                  marginBottom: 16,
+                  cursor: "pointer",
+                  lineHeight: 1.4,
+                }}
+              >
+                <input
+                  type="checkbox"
+                  checked={consent}
+                  onChange={(e) => setConsent(e.target.checked)}
+                  style={{ marginTop: 2, flexShrink: 0 }}
+                />
+                Yes, send me occasional updates on AI readiness. (Optional ‚Äî unrelated to signing in.)
+              </label>
+
+              <button
+                type="submit"
+                disabled={status === "sending"}
+                style={{
+                  width: "100%",
+                  padding: "12px",
+                  background: INK,
+                  color: "#FFF",
+                  border: "none",
+                  borderRadius: 6,
+                  fontSize: 14,
+                  fontWeight: 700,
+                  cursor: status === "sending" ? "wait" : "pointer",
+                }}
+              >
+                {status === "sending" ? "Sending..." : "Send me a sign-in link"}
+              </button>
+              {status === "error" && (
+                <p style={{ color: "#9B2C2C", fontSize: 12.5, marginTop: 10, marginBottom: 0 }}>{errorMsg}</p>
+              )}
+            </form>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <div style={{ display: "flex", justifyContent: "flex-end", padding: "10px 20px", maxWidth: 760, margin: "0 auto" }}>
+        <button
+          onClick={handleLogout}
+          style={{ background: "none", border: "none", color: SLATE, fontSize: 12.5, cursor: "pointer", textDecoration: "underline" }}
+        >
+          Sign out ({session.user.email})
+        </button>
+      </div>
+      <PaywallGate session={session}>{children}</PaywallGate>
+    </div>
+  );
+}
+
