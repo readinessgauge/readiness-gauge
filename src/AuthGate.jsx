@@ -69,7 +69,7 @@ export default function AuthGate({ children }) {
             </h1>
           </div>
           <p style={{ color: SLATE, fontSize: 13.5, marginBottom: 28 }}>
-            AI Readiness Diagnostic — sign in to access your assessment.
+            AI Readiness Diagnostic ‚Äî sign in to access your assessment.
           </p>
 
           {status === "sent" ? (
@@ -102,7 +102,8 @@ export default function AuthGate({ children }) {
                   borderRadius: 6,
                   border: `1px solid ${HAIRLINE}`,
                   fontSize: 14,
-                  boxSizing: "border-box",marginBottom: 14,
+                  boxSizing: "border-box",
+                  marginBottom: 14,
                 }}
               />
 
