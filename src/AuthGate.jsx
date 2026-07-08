@@ -69,7 +69,7 @@ export default function AuthGate({ children }) {
             </h1>
           </div>
           <p style={{ color: SLATE, fontSize: 13.5, marginBottom: 28 }}>
-            AI Readiness Diagnostic ‚Äî sign in to access your assessment.
+            AI Readiness Diagnostic - sign in to access your assessment.
           </p>
 
           {status === "sent" ? (
@@ -125,7 +125,7 @@ export default function AuthGate({ children }) {
                   onChange={(e) => setConsent(e.target.checked)}
                   style={{ marginTop: 2, flexShrink: 0 }}
                 />
-                Yes, send me occasional updates on AI readiness. (Optional ‚Äî unrelated to signing in.)
+                Yes, send me occasional updates on AI readiness. (Optional - unrelated to signing in.)
               </label>
 
               <button
@@ -169,4 +169,3 @@ export default function AuthGate({ children }) {
     </div>
   );
 }
-
